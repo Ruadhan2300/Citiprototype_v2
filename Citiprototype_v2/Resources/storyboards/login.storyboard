@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="162">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="21">
+            <objects>
+                <viewController id="22" sceneMemberID="viewController" customClass="ViewController" storyboardIdentifier="LoginScreen">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19"/>
+                        <viewControllerLayoutGuide type="bottom" id="20"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="23">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.098039215686274508" green="0.098039215686274508" blue="0.20784313725490197" alpha="1"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <color key="backgroundColor" colorSpace="calibratedRGB" red="0.098039215686274508" green="0.098039215686274508" blue="0.20784313725490197" alpha="1"/>
+                        </variation>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="39" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="331" width="374" height="52"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="13"/>
+                                <state key="normal" title="LOGIN WITH FACEBOOK" backgroundImage="drawable/fb_background.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="56" firstItem="39" firstAttribute="width" constant="374"/>
+                                    <constraint id="57" firstItem="39" firstAttribute="height" constant="52"/>
+                                </constraints>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="40" translatesAutoresizingMaskIntoConstraints="NO" image="drawable/fb_icon.png">
+                                <rect key="frame" x="32" y="331" width="28" height="52"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint id="102" firstItem="40" firstAttribute="width" constant="28"/>
+                                    <constraint id="103" firstItem="40" firstAttribute="height" constant="52"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="45" translatesAutoresizingMaskIntoConstraints="NO" text="Already a CITIPRO?" editable="NO" selectable="NO">
+                                <rect key="frame" x="87" y="194" width="240" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35" weight="heavy"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.098039215686274508" green="0.098039215686274508" blue="0.20784313725490197" alpha="1"/>
+                                <constraints>
+                                    <constraint id="58" firstItem="45" firstAttribute="height" constant="100"/>
+                                    <constraint id="59" firstItem="45" firstAttribute="width" constant="240"/>
+                                </constraints>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="46" translatesAutoresizingMaskIntoConstraints="NO" text="Or" editable="NO" selectable="NO">
+                                <rect key="frame" x="87" y="412" width="240" height="61"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.098039215686274508" green="0.098039215686274508" blue="0.20784313725490197" alpha="1"/>
+                                <constraints>
+                                    <constraint id="64" firstItem="46" firstAttribute="height" constant="61"/>
+                                    <constraint id="65" firstItem="46" firstAttribute="width" constant="240"/>
+                                </constraints>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="47" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="342" y="65" width="46" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17" weight="semibold"/>
+                                <state key="normal" title="HELP">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0.49019607843137253" green="0.49019607843137253" blue="0.56470588235294117" alpha="1"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="70" firstItem="47" firstAttribute="width" constant="46"/>
+                                    <constraint id="224" firstItem="47" firstAttribute="height" constant="34"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="48" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="177" y="651" width="50" height="30"/>
+                                <state key="normal" backgroundImage="drawable/arrow_white.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="95" firstItem="48" firstAttribute="height" constant="30"/>
+                                    <constraint id="96" firstItem="48" firstAttribute="width" constant="50"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="49" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="71" width="19" height="28"/>
+                                <state key="normal" backgroundImage="drawable/arrow_back.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="73" firstItem="49" firstAttribute="width" constant="19"/>
+                                    <constraint id="227" firstItem="49" firstAttribute="height" constant="28"/>
+                                </constraints>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="50" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Enter your email address" text="Enter your email address" textAlignment="center">
+                                <rect key="frame" x="32" y="460" width="340" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.41176470588235292" green="0.40784313725490196" blue="0.48627450980392156" alpha="1"/>
+                                <constraints>
+                                    <constraint id="76" firstItem="50" firstAttribute="width" constant="340"/>
+                                    <constraint id="77" firstItem="50" firstAttribute="height" constant="45"/>
+                                </constraints>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="51" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Enter your password" text="Enter your password" textAlignment="center">
+                                <rect key="frame" x="32" y="526" width="340" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.41176470588235292" green="0.40784313725490196" blue="0.48627450980392156" alpha="1"/>
+                                <constraints>
+                                    <constraint id="91" firstItem="51" firstAttribute="height" constant="45"/>
+                                    <constraint id="92" firstItem="51" firstAttribute="width" constant="340"/>
+                                </constraints>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="52" translatesAutoresizingMaskIntoConstraints="NO" image="drawable/line_white.png">
+                                <rect key="frame" x="24" y="505" width="356" height="17"/>
+                                <constraints>
+                                    <constraint id="83" firstItem="52" firstAttribute="height" constant="17"/>
+                                    <constraint id="84" firstItem="52" firstAttribute="width" constant="356"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="53" translatesAutoresizingMaskIntoConstraints="NO" image="drawable/line_white.png">
+                                <rect key="frame" x="24" y="573" width="356" height="16"/>
+                                <constraints>
+                                    <constraint id="85" firstItem="53" firstAttribute="height" constant="16"/>
+                                    <constraint id="86" firstItem="53" firstAttribute="width" constant="356"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumFontSize="17" id="236" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Enter your password" textAlignment="center" clearsOnBeginEditing="YES" text="Enter your Password">
+                                <rect key="frame" x="32" y="141" width="340" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.41176470588235292" green="0.40784313725490196" blue="0.48627450980392156" alpha="1"/>
+                                <constraints>
+                                    <constraint id="257" firstItem="236" firstAttribute="height" constant="45"/>
+                                    <constraint id="258" firstItem="236" firstAttribute="width" constant="340"/>
+                                </constraints>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint id="60" firstItem="23" firstAttribute="centerY" secondItem="45" secondAttribute="centerY" constant="124"/>
+                            <constraint id="61" firstItem="45" firstAttribute="centerX" secondItem="23" secondAttribute="centerX"/>
+                            <constraint id="62" firstItem="39" firstAttribute="centerX" secondItem="23" secondAttribute="centerX"/>
+                            <constraint id="63" firstItem="23" firstAttribute="centerY" secondItem="39" secondAttribute="centerY" constant="11"/>
+                            <constraint id="66" firstItem="46" firstAttribute="centerX" secondItem="23" secondAttribute="centerX"/>
+                            <constraint id="67" firstItem="46" firstAttribute="centerY" secondItem="23" secondAttribute="centerY" constant="74"/>
+                            <constraint id="79" firstItem="23" firstAttribute="centerX" secondItem="50" secondAttribute="centerX" constant="5"/>
+                            <constraint id="80" firstItem="50" firstAttribute="centerY" secondItem="23" secondAttribute="centerY" constant="114"/>
+                            <constraint id="81" firstItem="23" firstAttribute="centerX" secondItem="52" secondAttribute="centerX" constant="5"/>
+                            <constraint id="82" firstItem="52" firstAttribute="centerY" secondItem="23" secondAttribute="centerY" constant="145"/>
+                            <constraint id="87" firstItem="23" firstAttribute="centerX" secondItem="53" secondAttribute="centerX" constant="5"/>
+                            <constraint id="88" firstItem="53" firstAttribute="centerY" secondItem="23" secondAttribute="centerY" constant="213"/>
+                            <constraint id="89" firstItem="23" firstAttribute="centerX" secondItem="51" secondAttribute="centerX" constant="5"/>
+                            <constraint id="90" firstItem="51" firstAttribute="centerY" secondItem="23" secondAttribute="centerY" constant="180"/>
+                            <constraint id="93" firstItem="23" firstAttribute="centerX" secondItem="48" secondAttribute="centerX" constant="5"/>
+                            <constraint id="94" firstItem="48" firstAttribute="centerY" secondItem="23" secondAttribute="centerY" constant="298"/>
+                            <constraint id="100" firstItem="23" firstAttribute="centerX" secondItem="40" secondAttribute="centerX" constant="161"/>
+                            <constraint id="101" firstItem="23" firstAttribute="centerY" secondItem="40" secondAttribute="centerY" constant="11"/>
+                            <constraint id="225" firstItem="23" firstAttribute="centerY" secondItem="47" secondAttribute="centerY" constant="286"/>
+                            <constraint id="226" firstItem="47" firstAttribute="centerX" secondItem="23" secondAttribute="centerX" constant="158"/>
+                            <constraint id="228" firstItem="23" firstAttribute="centerX" secondItem="49" secondAttribute="centerX" constant="177"/>
+                            <constraint id="229" firstItem="23" firstAttribute="centerY" secondItem="49" secondAttribute="centerY" constant="283"/>
+                            <constraint id="259" firstItem="23" firstAttribute="centerX" secondItem="236" secondAttribute="centerX" constant="5"/>
+                            <constraint id="260" firstItem="23" firstAttribute="centerY" secondItem="236" secondAttribute="centerY" constant="204"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="48" id="name-outlet-48"/>
+                        <outlet property="LoginEmail" destination="50" id="name-outlet-50"/>
+                        <outlet property="LoginPassword" destination="51" id="name-outlet-51"/>
+                        <outlet property="LoginBackButton" destination="49" id="name-outlet-49"/>
+                        <outlet property="LoginHelpButton" destination="47" id="name-outlet-47"/>
+                        <outlet property="TextInputTest" destination="236" id="name-outlet-236"/>
+                    </connections>
+                    <navigationItem title="Title" id="211" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="13"/>
+        </scene>
+        <scene sceneID="108">
+            <objects>
+                <viewController id="109" sceneMemberID="viewController" customClass="SecondViewController" storyboardIdentifier="LoginComplete">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="106"/>
+                        <viewControllerLayoutGuide type="bottom" id="107"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="110">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.098039215686274508" green="0.098039215686274508" blue="0.20784313725490197" alpha="1"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="113" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="34" y="75" width="19" height="30"/>
+                                <state key="normal" backgroundImage="drawable/arrow_back.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="218" firstItem="113" firstAttribute="width" constant="19"/>
+                                    <constraint id="219" firstItem="113" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="239" translatesAutoresizingMaskIntoConstraints="NO" text="Already a CITIPRO?" editable="NO" selectable="NO">
+                                <rect key="frame" x="87" y="214" width="240" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35" weight="heavy"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.098039215686274508" green="0.098039215686274508" blue="0.20784313725490197" alpha="1"/>
+                                <constraints>
+                                    <constraint id="242" firstItem="239" firstAttribute="height" constant="100"/>
+                                    <constraint id="243" firstItem="239" firstAttribute="width" constant="240"/>
+                                </constraints>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="230" firstItem="110" firstAttribute="centerX" secondItem="113" secondAttribute="centerX" constant="163"/>
+                            <constraint id="231" firstItem="110" firstAttribute="centerY" secondItem="113" secondAttribute="centerY" constant="278"/>
+                            <constraint id="244" firstItem="239" firstAttribute="centerX" secondItem="110" secondAttribute="centerX"/>
+                            <constraint id="245" firstItem="110" firstAttribute="centerY" secondItem="239" secondAttribute="centerY" constant="104"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LoginCompleteBackButton" destination="113" id="name-outlet-113"/>
+                        <outlet property="LoginCompleteTextTest" destination="239" id="name-outlet-239"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="111" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="13"/>
+        </scene>
+        <scene sceneID="161">
+            <objects>
+                <navigationController id="162" sceneMemberID="viewController" storyboardIdentifier="NavController" navigationBarHidden="YES">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="164">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="212" destination="22" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="165" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-518" y="13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="drawable/Citiprologo.png" width="338" height="184"/>
+        <image name="drawable/CitiproText.png" width="402" height="64"/>
+        <image name="drawable/fb_icon.png" width="48" height="48"/>
+        <image name="drawable/arrow_white.png" width="86" height="54"/>
+        <image name="drawable/fb_background.png" width="670" height="104"/>
+        <image name="drawable/arrow_back.png" width="22" height="40"/>
+        <image name="drawable/line_white.png" width="550" height="2"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina55"/>
+    </simulatedMetricsContainer>
+</document>
