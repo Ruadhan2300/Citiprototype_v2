@@ -4,7 +4,7 @@ namespace Citiprototype_v2
 {
 	public class AppController
 	{
-		public static AppController instance;
+		private static AppController instance;
 
 		public static AppController Instance
 		{
@@ -18,10 +18,10 @@ namespace Citiprototype_v2
 		}
 
 		public bool checkLogin(string email, string password) {
-			if (email == "test") {
+			if (email == "") {
 				return true;
 			}
-			return false;
+			return true;
 		}
 
 	}

@@ -105,11 +105,13 @@
     <Folder Include="Media.xcassets\" />
     <Folder Include="Resources\scripts\storyboardScripts\" />
     <Folder Include="Resources\scripts\library\" />
+    <Folder Include="Resources\scripts\Data\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\storyboards\login.storyboard" />
     <InterfaceDefinition Include="Resources\storyboards\Startup.storyboard" />
     <InterfaceDefinition Include="Resources\storyboards\Main.storyboard" />
+    <InterfaceDefinition Include="Resources\storyboards\InstantiationTest.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -130,6 +132,24 @@
     <Compile Include="Resources\scripts\storyboardScripts\login.cs" />
     <Compile Include="Resources\scripts\storyboardScripts\AppController.cs" />
     <Compile Include="Resources\scripts\library\DicHelper.cs" />
+    <Compile Include="Resources\scripts\storyboardScripts\ListTest.cs" />
+    <Compile Include="Resources\scripts\storyboardScripts\ListTest.designer.cs">
+      <DependentUpon>ListTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\scripts\Data\TempMessageGenerator.cs" />
+    <Compile Include="Resources\scripts\Data\Message.cs" />
+    <Compile Include="Resources\scripts\RootTableSource.cs" />
+    <Compile Include="Resources\scripts\TableExampleClass.cs" />
+    <Compile Include="Resources\scripts\TableExampleClass.designer.cs">
+      <DependentUpon>TableExampleClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UITableProto.cs" />
+    <Compile Include="UITableProto.designer.cs">
+      <DependentUpon>UITableProto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\scripts\TableSource.cs" />
+    <Compile Include="Resources\scripts\TableManager.cs" />
+    <Compile Include="Resources\scripts\GrowRowTable.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\drawable\Citiprologo.png" />

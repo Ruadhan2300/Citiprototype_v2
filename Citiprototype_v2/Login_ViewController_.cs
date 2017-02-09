@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using UIKit;
 
 
 namespace Citiprototype_v2
 {
-	public partial class ViewController : UIViewController
+	public partial class Login_ViewController : UIViewController
 	{
-		protected ViewController(IntPtr handle) : base(handle)
+		protected Login_ViewController(IntPtr handle) : base(handle)
 		{
 			// Note: this .ctor should not contain any initialization logic.
 		}
@@ -33,25 +33,14 @@ namespace Citiprototype_v2
 		{
 			LoginButton.TouchUpInside += (object sender, EventArgs e) =>
 			{
-				//Submit login
 				loginButton(this);
-			};
-
-			LoginHelpButton.TouchUpInside += (object sender, EventArgs e) =>
-			{
-				//Open help window
-			};
-
-			LoginBackButton.TouchUpInside += (object sender, EventArgs e) =>
-			{
-				//Back button
 			};
 		}
 
 
-			/// <summary>
-			/// initialise the UI elements
-			/// </summary>
+		/// <summary>
+		/// initialise the UI elements
+		/// </summary>
 		public void initUI()
 		{
 			LoginBackButton.Enabled = false;
@@ -68,15 +57,21 @@ namespace Citiprototype_v2
 
 			SecondViewController nextPage = instance.Storyboard.InstantiateViewController("LoginComplete") as SecondViewController;
 
-				PersistentDataCache.Instance.LoggedIn = true;
+			PersistentDataCache.Instance.LoggedIn = true;
 			if (AppController.Instance.checkLogin(emailInput, ""))
 			{
 				instance.NavigationController.PushViewController(nextPage, false);
 			}
 			else {
-				TextInputTest.Text = "";
-				TextInputTest.Placeholder = "Invalid Code!";
+				TextInputTest.Text = "Invalid Code";
 			}
+			/*
+			if (PersistentDataCache.Instance.user.login("", "")) // logged in succesfully
+			{
+				PersistentDataCache.Instance.LoggedIn = true;
+				instance.NavigationController.PushViewController(nextPage, true);
+			}*/
+			//instance.NavigationController.PushViewController(nextPage, false);
 
 		}
 

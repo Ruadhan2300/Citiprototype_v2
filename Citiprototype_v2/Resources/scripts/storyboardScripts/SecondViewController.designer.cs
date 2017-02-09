@@ -22,6 +22,10 @@ namespace Citiprototype_v2
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextView LoginCompleteTextTest { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        Citiprototype_v2.UITableProto TableProto { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (LoginCompleteBackButton != null) {
@@ -32,6 +36,11 @@ namespace Citiprototype_v2
             if (LoginCompleteTextTest != null) {
                 LoginCompleteTextTest.Dispose ();
                 LoginCompleteTextTest = null;
+            }
+
+            if (TableProto != null) {
+                TableProto.Dispose ();
+                TableProto = null;
             }
         }
     }
