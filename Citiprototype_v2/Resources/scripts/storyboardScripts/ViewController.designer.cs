@@ -19,6 +19,10 @@ namespace Citiprototype_v2
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView EmailBar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton LoginBackButton { get; set; }
 
         [Outlet]
@@ -39,13 +43,18 @@ namespace Citiprototype_v2
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField TextInputTest { get; set; }
+        UIKit.UIImageView PasswordBar { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
             if (button_next != null) {
                 button_next.Dispose ();
                 button_next = null;
+            }
+
+            if (EmailBar != null) {
+                EmailBar.Dispose ();
+                EmailBar = null;
             }
 
             if (LoginBackButton != null) {
@@ -73,9 +82,9 @@ namespace Citiprototype_v2
                 LoginPassword = null;
             }
 
-            if (TextInputTest != null) {
-                TextInputTest.Dispose ();
-                TextInputTest = null;
+            if (PasswordBar != null) {
+                PasswordBar.Dispose ();
+                PasswordBar = null;
             }
         }
     }

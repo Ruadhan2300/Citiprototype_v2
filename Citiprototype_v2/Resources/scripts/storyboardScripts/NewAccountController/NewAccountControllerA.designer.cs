@@ -1,0 +1,47 @@
+// WARNING
+//
+// This file has been generated automatically by Xamarin Studio from the outlets and
+// actions declared in your storyboard file.
+// Manual changes to this file will not be maintained.
+//
+using Foundation;
+using System;
+using System.CodeDom.Compiler;
+using UIKit;
+
+namespace Citiprototype_v2
+{
+    [Register ("NewAccountControllerA")]
+    partial class NewAccountControllerA
+    {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton Back { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton Button_Continue { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField TextInput { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (Back != null) {
+                Back.Dispose ();
+                Back = null;
+            }
+
+            if (Button_Continue != null) {
+                Button_Continue.Dispose ();
+                Button_Continue = null;
+            }
+
+            if (TextInput != null) {
+                TextInput.Dispose ();
+                TextInput = null;
+            }
+        }
+    }
+}

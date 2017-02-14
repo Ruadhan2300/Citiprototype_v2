@@ -8,7 +8,7 @@ namespace Citiprototype_v2
 	public class TableSource : UITableViewDataSource
 	{
 		#region Private Variables
-		private TableManager Controller;
+		//private TableManager Controller;
 		#endregion
 
 		#region Computed Properties
@@ -30,7 +30,7 @@ namespace Citiprototype_v2
 		public TableSource(TableManager controller)
 		{
 			// Initialize
-			this.Controller = controller;
+			//this.Controller = controller;
 			Initialize();
 		}
 

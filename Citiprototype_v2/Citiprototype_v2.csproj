@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Build.Download.0.2.2\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.2.2\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -89,6 +90,21 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Core">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.Core.3.4.5\lib\Xamarin.iOS10\Firebase.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.InstanceID">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.InstanceID.1.0.8\lib\Xamarin.iOS10\Firebase.InstanceID.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Analytics">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.Analytics.3.6.0\lib\Xamarin.iOS10\Firebase.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Auth">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.Auth.3.0.6.1\lib\Xamarin.iOS10\Firebase.Auth.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -106,6 +122,10 @@
     <Folder Include="Resources\scripts\storyboardScripts\" />
     <Folder Include="Resources\scripts\library\" />
     <Folder Include="Resources\scripts\Data\" />
+    <Folder Include="Resources\scripts\storyboardScripts\IntroController\" />
+    <Folder Include="Resources\scripts\storyboardScripts\NewAccountController\" />
+    <Folder Include="Resources\scripts\FakeApplicationServer\" />
+    <Folder Include="Resources\scripts\FakeApplicationServer\data\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\storyboards\login.storyboard" />
@@ -116,6 +136,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
@@ -128,14 +149,8 @@
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
-    <Compile Include="Resources\scripts\storyboardScripts\PersistentDataCache.cs" />
     <Compile Include="Resources\scripts\storyboardScripts\login.cs" />
-    <Compile Include="Resources\scripts\storyboardScripts\AppController.cs" />
     <Compile Include="Resources\scripts\library\DicHelper.cs" />
-    <Compile Include="Resources\scripts\storyboardScripts\ListTest.cs" />
-    <Compile Include="Resources\scripts\storyboardScripts\ListTest.designer.cs">
-      <DependentUpon>ListTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Resources\scripts\Data\TempMessageGenerator.cs" />
     <Compile Include="Resources\scripts\Data\Message.cs" />
     <Compile Include="Resources\scripts\RootTableSource.cs" />
@@ -150,6 +165,44 @@
     <Compile Include="Resources\scripts\TableSource.cs" />
     <Compile Include="Resources\scripts\TableManager.cs" />
     <Compile Include="Resources\scripts\GrowRowTable.cs" />
+    <Compile Include="Resources\scripts\storyboardScripts\SignupController.cs" />
+    <Compile Include="Resources\scripts\storyboardScripts\SignupController.designer.cs">
+      <DependentUpon>SignupController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\scripts\storyboardScripts\IntroController\IntroControllerA.cs" />
+    <Compile Include="Resources\scripts\storyboardScripts\IntroController\IntroControllerA.designer.cs">
+      <DependentUpon>IntroControllerA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\scripts\storyboardScripts\IntroController\IntroControllerB.cs" />
+    <Compile Include="Resources\scripts\storyboardScripts\IntroController\IntroControllerB.designer.cs">
+      <DependentUpon>IntroControllerB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\scripts\storyboardScripts\IntroController\IntroControllerC.cs" />
+    <Compile Include="Resources\scripts\storyboardScripts\IntroController\IntroControllerC.designer.cs">
+      <DependentUpon>IntroControllerC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\scripts\AppController.cs" />
+    <Compile Include="Resources\scripts\ListTest.cs" />
+    <Compile Include="Resources\scripts\ListTest.designer.cs">
+      <DependentUpon>ListTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\scripts\Data\PersistentDataCache.cs" />
+    <Compile Include="Resources\scripts\storyboardScripts\NewAccountController\NewAccountControllerA.cs" />
+    <Compile Include="Resources\scripts\storyboardScripts\NewAccountController\NewAccountControllerA.designer.cs">
+      <DependentUpon>NewAccountControllerA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\scripts\storyboardScripts\NewAccountController\NewAccountControllerB.cs" />
+    <Compile Include="Resources\scripts\storyboardScripts\NewAccountController\NewAccountControllerB.designer.cs">
+      <DependentUpon>NewAccountControllerB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\scripts\storyboardScripts\NewAccountController\NewAccountControllerC.cs" />
+    <Compile Include="Resources\scripts\storyboardScripts\NewAccountController\NewAccountControllerC.designer.cs">
+      <DependentUpon>NewAccountControllerC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\scripts\Data\RequestDataManipulator.cs" />
+    <Compile Include="Resources\scripts\Data\Timer.cs" />
+    <Compile Include="Resources\scripts\FakeApplicationServer\FakeApplicationServer.cs" />
+    <Compile Include="Resources\scripts\library\TrackingStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\drawable\Citiprologo.png" />
@@ -163,6 +216,26 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
     <BundleResource Include="Resources\scripts\library\TextUtils.cs" />
+    <BundleResource Include="Resources\drawable\Citiprologo_wide.png" />
+    <BundleResource Include="Resources\drawable\white_outline_box.sketch" />
+    <BundleResource Include="Resources\drawable\white_outline_box.png" />
+    <BundleResource Include="Resources\drawable\Citipro_intro_A.png" />
+    <BundleResource Include="Resources\drawable\Citipro_intro_Ab.png" />
+    <BundleResource Include="Resources\drawable\Citipro_intro_B.png" />
+    <BundleResource Include="Resources\drawable\Citipro_intro_Bb.png" />
+    <BundleResource Include="Resources\drawable\Citipro_intro_Ca.png" />
+    <BundleResource Include="Resources\drawable\Citipro_intro_Cb.png" />
+    <BundleResource Include="Resources\drawable\Citipro_logo_Bc.png" />
+    <BundleResource Include="Resources\drawable\arttunnelpreview.png" />
+    <BundleResource Include="Resources\drawable\red_button.png" />
+    <BundleResource Include="Resources\drawable\stars.png" />
+    <BundleResource Include="Resources\drawable\RedLine.png" />
+    <BundleResource Include="Resources\scripts\FakeApplicationServer\data\userDataTest.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.2.2\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.2.2\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.Core.3.4.5\build\Xamarin.Firebase.iOS.Core.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Core.3.4.5\build\Xamarin.Firebase.iOS.Core.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.InstanceID.1.0.8\build\Xamarin.Firebase.iOS.InstanceID.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.InstanceID.1.0.8\build\Xamarin.Firebase.iOS.InstanceID.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.Analytics.3.6.0\build\Xamarin.Firebase.iOS.Analytics.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Analytics.3.6.0\build\Xamarin.Firebase.iOS.Analytics.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.Auth.3.0.6.1\build\Xamarin.Firebase.iOS.Auth.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Auth.3.0.6.1\build\Xamarin.Firebase.iOS.Auth.targets')" />
 </Project>

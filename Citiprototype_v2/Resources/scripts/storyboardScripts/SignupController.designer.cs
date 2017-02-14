@@ -11,27 +11,27 @@ using UIKit;
 
 namespace Citiprototype_v2
 {
-    [Register ("SecondViewController")]
-    partial class SecondViewController
+    [Register ("SignupController")]
+    partial class SignupController
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton LoginCompleteBackButton { get; set; }
+        UIKit.UIButton Button_Login { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextView LoginCompleteTextTest { get; set; }
+        UIKit.UIButton Button_Signup { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (LoginCompleteBackButton != null) {
-                LoginCompleteBackButton.Dispose ();
-                LoginCompleteBackButton = null;
+            if (Button_Login != null) {
+                Button_Login.Dispose ();
+                Button_Login = null;
             }
 
-            if (LoginCompleteTextTest != null) {
-                LoginCompleteTextTest.Dispose ();
-                LoginCompleteTextTest = null;
+            if (Button_Signup != null) {
+                Button_Signup.Dispose ();
+                Button_Signup = null;
             }
         }
     }

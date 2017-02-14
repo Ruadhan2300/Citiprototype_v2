@@ -1,0 +1,44 @@
+﻿{
+	"user_001" : {
+		"forename" : "Adam",
+        "surname" : "Alpha",
+        "email" : "Alpha@mikleo.com",
+        "password" : "testA"
+    },
+
+    "user_002" : {
+		"forename" : "Ben",
+        "surname" : "Beta",
+        "email" : "Beta@mikleo.com",
+        "password" : "testB"
+    },
+
+    "user_003" : {
+		"forename" : "Cameron",
+        "surname" : "Gamma",
+        "email" : "Gamma@mikleo.com",
+        "password" : "testC"
+    },
+
+    "user_004" : {
+		"forename" : "Dave",
+        "surname" : "Delta",
+        "email" : "Delta@mikleo.com",
+        "password" : "testD"
+    },
+
+    "user_005" : {
+		"forename" : "Evan",
+        "surname" : "Epsilon",
+        "email" : "Epsilon@mikleo.com",
+        "password" : "testE"
+    },
+
+    "user_006" : {
+		"forename" : "Fabian",
+        "surname" : "Wau",
+        "email" : "Wau@mikleo.com",
+        "password" : "testF"
+    }
+
+}

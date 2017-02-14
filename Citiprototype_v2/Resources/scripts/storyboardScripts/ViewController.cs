@@ -34,17 +34,19 @@ namespace Citiprototype_v2
 			LoginButton.TouchUpInside += (object sender, EventArgs e) =>
 			{
 				//Submit login
-				loginButton(this);
+				loginButton();
 			};
 
 			LoginHelpButton.TouchUpInside += (object sender, EventArgs e) =>
 			{
 				//Open help window
+				AppController.Instance.SendServerRequest(null);
 			};
 
 			LoginBackButton.TouchUpInside += (object sender, EventArgs e) =>
 			{
 				//Back button
+				backButton();
 			};
 		}
 
@@ -54,30 +56,64 @@ namespace Citiprototype_v2
 			/// </summary>
 		public void initUI()
 		{
-			LoginBackButton.Enabled = false;
-			LoginBackButton.Alpha = 0f;
+			//LoginBackButton.Enabled = false;
+			//LoginBackButton.Alpha = 0f;
+			EmailBar.Highlighted = false;
+			PasswordBar.Highlighted = false;
 		}
 
 		/// <summary>
 		/// Login to app
 		/// </summary>
 		/// <param name="instance">Instance.</param>
-		public void loginButton(ViewController instance)
+		public void loginButton()
 		{
-			string emailInput = TextInputTest.Text;
+			string emailInput = LoginEmail.Text;
+			string passwordInput = LoginPassword.Text;
 
-			SecondViewController nextPage = instance.Storyboard.InstantiateViewController("LoginComplete") as SecondViewController;
+
+			EmailBar.Highlighted = false;
+			PasswordBar.Highlighted = false;
+
+			AppController.DATAINPUT_RESULT loginResult = AppController.Instance.checkLogin(emailInput, passwordInput);
+			if (loginResult == AppController.DATAINPUT_RESULT.VALID)
+			{
+				SecondViewController nextPage = this.Storyboard.InstantiateViewController("LoginComplete") as SecondViewController;
 
 				PersistentDataCache.Instance.LoggedIn = true;
-			if (AppController.Instance.checkLogin(emailInput, ""))
-			{
-				instance.NavigationController.PushViewController(nextPage, false);
+				this.NavigationController.PushViewController(nextPage, false);
 			}
 			else {
-				TextInputTest.Text = "";
-				TextInputTest.Placeholder = "Invalid Code!";
+				if (loginResult == AppController.DATAINPUT_RESULT.EMAIL_TOO_SHORT)
+				{
+
+					LoginEmail.Text = "";
+					LoginEmail.Placeholder = "Invalid Email!";
+					EmailBar.Highlighted = true;
+				}
+				if (loginResult == AppController.DATAINPUT_RESULT.PASSWORD_INVALID)
+				{
+					LoginPassword.Text = "";
+					LoginPassword.Placeholder = "Invalid Password!";
+					PasswordBar.Highlighted = true;
+				}
 			}
 
+		}
+
+		/// <summary>
+		/// Back to the main startup hub
+		/// </summary>
+		public void backButton()
+		{
+
+			LoginBackButton.TouchUpInside += (object sender, EventArgs e) =>
+			{
+				SignupController nextPage = this.Storyboard.InstantiateViewController("LoginHub") as SignupController;
+
+				this.NavigationController.PushViewController(nextPage, false);
+
+			};
 		}
 
 		public override void DidReceiveMemoryWarning()

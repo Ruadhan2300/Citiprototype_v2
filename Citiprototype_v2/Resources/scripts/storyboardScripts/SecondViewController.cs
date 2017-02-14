@@ -43,7 +43,8 @@ namespace Citiprototype_v2
 		/// </summary>
 		public void initUI()
 		{
-			setLoginCompleteText(PersistentDataCache.Instance.LoggedIn.ToString());
+			//setLoginCompleteText(PersistentDataCache.Instance.LoggedIn.ToString());
+			/*
 			List<Message> messages = new List<Message>
 			{
 				new Message {senderName = "Alice", content = "Hello World"},
@@ -59,7 +60,7 @@ namespace Citiprototype_v2
 			TableProto.Delegate = new GrowRowTableDelegate(tManager);
 			TableProto.EstimatedRowHeight = 40f;
 			TableProto.ReloadData();
-
+			*/
 		}
 
 		public void setLoginCompleteText(string text)

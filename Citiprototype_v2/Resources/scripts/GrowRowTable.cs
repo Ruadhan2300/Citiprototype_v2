@@ -6,7 +6,7 @@ namespace Citiprototype_v2
 	public class GrowRowTableDelegate : UITableViewDelegate
 	{
 		#region Private Variables
-		private TableManager Controller;
+		//private TableManager Controller;
 		#endregion
 
 		#region Constructors
@@ -17,7 +17,7 @@ namespace Citiprototype_v2
 		public GrowRowTableDelegate(TableManager controller)
 		{
 			// Initialize
-			this.Controller = controller;
+			//this.Controller = controller;
 		}
 		#endregion
 

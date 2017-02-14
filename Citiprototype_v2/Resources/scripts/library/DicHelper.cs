@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Reflection;
 
-public class DicHelper {
+public static class DicHelper {
 
 
 	/// <summary>
@@ -10,8 +14,11 @@ public class DicHelper {
 	/// <returns>The object from dict.</returns>
 	/// <param name="key">Key.</param>
 	/// <param name="data">Data.</param>
-	public static object getObjectFromDict(string key, Dictionary<string, object> data)
+	public static object getObjectFromDict( this Dictionary<string, object> data, string key)
 	{
+		if (data.ContainsKey(key)){
+			return data[key];
+		}
 		return null;
 	}
 
@@ -21,9 +28,12 @@ public class DicHelper {
 	/// <returns>The stringfrom dict.</returns>
 	/// <param name="key">Key.</param>
 	/// <param name="data">Data.</param>
-	public static string getStringFromDict(string key, Dictionary<string,object> data)
+	public static string getStringFromDict(this Dictionary<string, object> data, string key)
 	{
-		return "";
+		if (data.ContainsKey(key)){
+			return data[key] as string;
+		}
+		return null;
 	}
 
 	/// <summary>
@@ -32,8 +42,18 @@ public class DicHelper {
 	/// <returns>The intfrom dict.</returns>
 	/// <param name="key">Key.</param>
 	/// <param name="data">Data.</param>
-	public static int getIntFromDict(string key, Dictionary<string, object> data)
+	public static int getIntFromDict(this Dictionary<string, object> data, string key)
 	{
+		if (data.ContainsKey(key))
+		{
+			object dataValue = data[key];
+			int output = -1;
+			if (int.TryParse(dataValue as string, out output))
+			{
+				return output;
+			}
+
+		}
 		return -1;
 	}
 
@@ -43,8 +63,18 @@ public class DicHelper {
 	/// <returns>The longfrom dict.</returns>
 	/// <param name="key">Key.</param>
 	/// <param name="data">Data.</param>
-	public static long getLongFromDict(string key, Dictionary<string, object> data)
+	public static long getLongFromDict(this Dictionary<string, object> data, string key)
 	{
+		if (data.ContainsKey(key))
+		{
+			object dataValue = data[key];
+			long output = -1;
+			if (long.TryParse(dataValue as string, out output))
+			{
+				return output;
+			}
+
+		}
 		return -1;
 	}
 
