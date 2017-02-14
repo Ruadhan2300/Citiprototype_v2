@@ -91,7 +91,11 @@ namespace Citiprototype_v2
 			return DATAINPUT_RESULT.VALID;
 		}
 
+		public void sendFirebaseRequest()
+		{
+			Firebase.Auth.EmailPasswordAuthProvider.GetCredential("rowan@mikleo.com", "testpass");
 
+		}
 
 		public void SendServerRequest(object requestData)
 		{
@@ -107,7 +111,7 @@ namespace Citiprototype_v2
 		}
 
 		/// <summary>
-		/// Recieves JSon format data from application server
+		/// Recieves JSon format data from application server 
 		/// </summary>
 		/// <param name="data">Data.</param>
 		public void GetServerData(string data)

@@ -40,7 +40,8 @@ namespace Citiprototype_v2
 			LoginHelpButton.TouchUpInside += (object sender, EventArgs e) =>
 			{
 				//Open help window
-				AppController.Instance.SendServerRequest(null);
+				//AppController.Instance.SendServerRequest(null);
+				AppController.Instance.sendFirebaseRequest();
 			};
 
 			LoginBackButton.TouchUpInside += (object sender, EventArgs e) =>

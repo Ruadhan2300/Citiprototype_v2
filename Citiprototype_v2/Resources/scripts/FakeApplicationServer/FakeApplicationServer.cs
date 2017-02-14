@@ -23,8 +23,8 @@ namespace Citiprototype_v2
 
 		private void processRequest(IDictionary<string,object> data)
 		{
-			Dictionary<string, object> dataShort = data as Dictionary<string, object>;
-			string dataValue = dataShort.getStringFromDict("data1");
+			//Dictionary<string, object> dataShort = data as Dictionary<string, object>;
+			//string dataValue = dataShort.getStringFromDict("data1");
 		}
 
 		public void serverReceiver(string encodedData)
